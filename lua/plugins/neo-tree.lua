@@ -1,3 +1,7 @@
+local u = require "modules.util"
+
+local nnoremap = u.nnoremap
+
 return {
   "nvim-tree/nvim-tree.lua",
   config = function()
@@ -11,6 +15,11 @@ return {
         number = false,
       },
     })
+
+  -- NvimTree
+  nnoremap("<Leader>q", "<CMD>:NvimTreeToggle<CR>", { desc = "Open NvimTree file explorer tree" })
+  nnoremap("<Leader>f", "<CMD>:NvimTreeFindFile!<CR>", { desc = "Open NvimTree file finder" })
+
   end,
 }
 

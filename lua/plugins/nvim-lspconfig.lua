@@ -1,3 +1,7 @@
+local u = require "modules.util"
+
+local nnoremap = u.nnoremap
+
 return {
   "neovim/nvim-lspconfig",
   config = function()
@@ -7,5 +11,8 @@ return {
     lspconfig.elixirls.setup({
       cmd = { "/opt/homebrew/bin/elixir-ls" } 
     })
+
+    -- Remaps for LSP
+    nnoremap("gd", ":lua vim.lsp.buf.definition()<CR>")
   end,
 }
