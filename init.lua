@@ -18,3 +18,4 @@ vim.opt.termguicolors = true
 -- vim.cmd [[ colorscheme tokyonight ]]
 -- vim.cmd [[ colorscheme darkblue ]]
 vim.cmd [[ colorscheme zaibatsu ]]
+-- vim.cmd [[ colorscheme farout ]]

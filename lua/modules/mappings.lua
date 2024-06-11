@@ -16,6 +16,7 @@ nnoremap("trm", ":term<CR>", { desc = "Open embedded terminal" })
 nnoremap("<CR>", "G", { desc = "Navigate by using line number + Enter" })
 nnoremap("<Leader>cp", ":let @+=@%", { desc = "Copy file path" })
 nnoremap("J", "mzJ`z", {desc = "Wraps lines"})
+nnoremap("<Leader>jsonf", ":%!jq '.'<CR>", { desc = "Format JSON" })
 
 -- Undo breakpoints
 inoremap(",", ",<c-g>u")
@@ -33,4 +34,6 @@ nnoremap("<Leader>a", "=ip", { desc = "Indent all lines" })
 
 nnoremap("<Leader>cc", "gcc", { desc = "Comment line" })
 
+-- Elixir
 nnoremap("<Leader>mt", ":!mix test %:p<CR>", { desc = "Run mix test on current file" })
+

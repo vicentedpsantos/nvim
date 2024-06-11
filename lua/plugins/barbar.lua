@@ -5,7 +5,7 @@ return {
       icons = {
         filetype = { enabled = false },
         separator = {left = '👉 ', right = ' 👈'},
-        modified = { button = "💩" },
+        modified = { button = "🔥" },
         preset = "powerline" -- default, powerline or slanted
       },
     })

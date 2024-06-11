@@ -13,6 +13,7 @@ return {
     })
 
     -- Remaps for LSP
-    nnoremap("gd", ":lua vim.lsp.buf.definition()<CR>")
+    nnoremap("gd", ":lua vim.lsp.buf.definition()<cr>")
+    nnoremap("fmt", ":lua vim.lsp.buf.format()<cr>")
   end,
 }

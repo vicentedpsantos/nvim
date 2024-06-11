@@ -12,7 +12,6 @@ return {
       },
     })
 
-
     -- Keybindings
     vim.keymap.set("n", "<leader>gb", "<cmd>BlameToggle window<cr>", { desc = "Toggle git blame window" })
   end,
