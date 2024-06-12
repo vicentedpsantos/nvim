@@ -17,6 +17,7 @@ return {
     lspconfig.erlangls.setup{}
 
     -- Remaps for LSP
+    -- Shift + K to show hover
     nnoremap("gd", ":lua vim.lsp.buf.definition()<cr>", { desc = "Run request under the cursor" })
     nnoremap("fmt", ":lua vim.lsp.buf.format()<cr>", { desc = "Run last request" })
     nnoremap("<leader>ca", ":lua vim.lsp.buf.code_action()<cr>", { desc = "Run code action" })
