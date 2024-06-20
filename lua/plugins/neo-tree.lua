@@ -18,7 +18,7 @@ return {
 
   -- NvimTree
   nnoremap("<Leader>q", "<CMD>:NvimTreeToggle<CR>", { desc = "Open NvimTree file explorer tree" })
-  nnoremap("<Leader>f", "<CMD>:NvimTreeFindFile!<CR>", { desc = "Open NvimTree file finder" })
+  nnoremap("<Leader>r", "<CMD>:NvimTreeFindFile!<CR>", { desc = "Open NvimTree file finder" })
 
   end,
 }
