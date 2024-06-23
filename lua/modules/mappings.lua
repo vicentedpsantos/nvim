@@ -36,3 +36,18 @@ nnoremap("<Leader>a", "=ip", { desc = "Indent all lines" })
 -- Elixir
 nnoremap("<Leader>mt", ":!mix test %:p<CR>", { desc = "Run mix test on current file" })
 
+
+-- :autocmd BufWritePost *.ex,*.exs silent :!mix format %
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.ex,*.exs",
+    callback = function()
+        local format_command = {"mix", "format", vim.api.nvim_buf_get_name(0)}
+        local format_job_id = vim.fn.jobstart(format_command, {
+            on_exit = function(_, code, _)
+                if code == 0 then
+                    vim.cmd('e!')
+                end
+            end,
+        })
+    end,
+})

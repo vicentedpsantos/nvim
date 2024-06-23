@@ -23,5 +23,6 @@ vim.opt.termguicolors = true
 -- vim.cmd [[ colorscheme tokyobones ]]
 -- vim.cmd [[ colorscheme zenbones ]]
 
-vim.cmd [[ colorscheme darkblue ]]
+-- vim.cmd [[ colorscheme darkblue ]]
+vim.cmd [[ colorscheme evening ]]
 
