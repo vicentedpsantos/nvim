@@ -36,6 +36,9 @@ nnoremap("<Leader>a", "=ip", { desc = "Indent all lines" })
 -- Elixir
 nnoremap("<Leader>mt", ":!mix test %:p<CR>", { desc = "Run mix test on current file" })
 
+-- Erlang
+nnoremap("<Leader>rbe", ":!rebar3 eunit<CR>", { desc = "Run rebar3 eunit" })
+
 
 -- :autocmd BufWritePost *.ex,*.exs silent :!mix format %
 vim.api.nvim_create_autocmd("BufWritePre", {
