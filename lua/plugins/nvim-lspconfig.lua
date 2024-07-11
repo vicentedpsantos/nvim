@@ -13,6 +13,9 @@ return {
       cmd = { mason_bin_path .. "/elixir-ls" },
     })
 
+    -- print path to elixir-ls
+    print("Elixir LS path: " .. mason_bin_path .. "/elixir-ls")
+
     -- Erlang
     lspconfig.erlangls.setup{}
 

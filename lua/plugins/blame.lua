@@ -13,6 +13,7 @@ return {
     })
 
     -- Keybindings
-    vim.keymap.set("n", "<leader>gb", "<cmd>BlameToggle window<cr>", { desc = "Toggle git blame window" })
+    vim.keymap.set("n", "<leader>mz", "<cmd>BufferMovePrevious<cr>", { desc = "Re-order to previous" })
+    vim.keymap.set("n", "<leader>mx", "<cmd>BufferMoveNext<cr>", { desc = "Re-order to next" })
   end,
 }

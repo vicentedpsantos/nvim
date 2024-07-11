@@ -8,6 +8,10 @@ return {
         modified = { button = "🔥" },
         preset = "powerline" -- default, powerline or slanted
       },
+      insert_at_end = true,
     })
+
+    -- Keybindings
+    vim.keymap.set("n", "<leader>mz", "<cmd>BlameToggle window<cr>", { desc = "Toggle git blame window" })
   end,
 }
