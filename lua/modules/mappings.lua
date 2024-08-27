@@ -39,6 +39,8 @@ nnoremap("<Leader>mt", ":!mix test %:p<CR>", { desc = "Run mix test on current f
 -- Erlang
 nnoremap("<Leader>rbe", ":!rebar3 eunit<CR>", { desc = "Run rebar3 eunit" })
 
+nnoremap("<Leader>fjson", ":%!jq --indent 4 '.' %<CR>", { desc = "Format JSON" })
+
 
 -- :autocmd BufWritePost *.ex,*.exs silent :!mix format %
 vim.api.nvim_create_autocmd("BufWritePre", {

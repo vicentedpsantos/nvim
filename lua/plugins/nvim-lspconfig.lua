@@ -7,7 +7,7 @@ return {
   config = function()
     local lspconfig = require("lspconfig")
     local mason_bin_path = u.vim_path .. "/mason/bin"
-    
+
     -- Elixir
     lspconfig.elixirls.setup({
       cmd = { mason_bin_path .. "/elixir-ls" },
@@ -18,6 +18,9 @@ return {
 
     -- Erlang
     lspconfig.erlangls.setup{}
+
+    -- Lua
+    lspconfig.lua_ls.setup{}
 
     -- Remaps for LSP
     -- Shift + K to show hover
