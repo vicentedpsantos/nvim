@@ -17,6 +17,12 @@ nnoremap("<Leader>cp", ":let @+=@%", { desc = "Copy file path" })
 nnoremap("J", "mzJ`z", {desc = "Wraps lines"})
 nnoremap("<Leader>cc", "gcc", { desc = "Comment line" })
 
+-- Resizing windows
+nnoremap("=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
+nnoremap("-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
+nnoremap("+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
+nnoremap("_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
+
 -- Undo breakpoints
 inoremap(",", ",<c-g>u")
 inoremap(".", ".<c-g>u")
@@ -43,15 +49,15 @@ nnoremap("<Leader>fjson", ":%!jq --indent 4 '.' %<CR>", { desc = "Format JSON" }
 
 -- :autocmd BufWritePost *.ex,*.exs silent :!mix format %
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*.ex,*.exs",
-    callback = function()
-        local format_command = {"mix", "format", vim.api.nvim_buf_get_name(0)}
-        local format_job_id = vim.fn.jobstart(format_command, {
-            on_exit = function(_, code, _)
-                if code == 0 then
+  pattern = "*.ex,*.exs",
+  callback = function()
+    local format_command = {"mix", "format", vim.api.nvim_buf_get_name(0)}
+    local format_job_id = vim.fn.jobstart(format_command, {
+      on_exit = function(_, code, _)
+                  if code == 0 then
                     vim.cmd('e!')
-                end
-            end,
-        })
-    end,
+                  end
+                end,
+    })
+  end,
 })
