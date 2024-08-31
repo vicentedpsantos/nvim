@@ -15,7 +15,6 @@ nnoremap("trm", ":term<CR>", { desc = "Open embedded terminal" })
 nnoremap("<CR>", "G", { desc = "Navigate by using line number + Enter" })
 nnoremap("<Leader>cp", ":let @+=@%", { desc = "Copy file path" })
 nnoremap("J", "mzJ`z", {desc = "Wraps lines"})
-nnoremap("<Leader>jsonf", ":%!jq '.'<CR>", { desc = "Format JSON" })
 nnoremap("<Leader>cc", "gcc", { desc = "Comment line" })
 
 -- Undo breakpoints
