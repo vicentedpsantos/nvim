@@ -1,13 +1,18 @@
 local u = require "modules.util"
 
-local nnoremap = u.nnoremap
-
 return {
   'MeanderingProgrammer/markdown.nvim',
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
   config = function()
     require('render-markdown').setup({})
-  end,
 
-  nnoremap("<leader>mdf", "<cmd>:RenderMarkdownToggle<cr>")
+    local wk = require("which-key")
+
+    wk.add({
+      {"<leader>mdf", ":RenderMarkdown toggle<cr>", desc = "Toggle Markdown Render" },
+    }, {
+        mode = "n",
+        silent = true,
+    })
+  end,
 }
