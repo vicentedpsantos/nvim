@@ -13,14 +13,22 @@ return {
     lspconfig.erlangls.setup{}
 
     -- Lua
-    lspconfig.lua_ls.setup{}
+    lspconfig.lua_ls.setup({
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" }
+          }
+        }
+      }
+    })
 
     -- Swift
     lspconfig.sourcekit.setup{}
 
     vim.api.nvim_create_autocmd('LspAttach', {
       desc = 'LSP Actions',
-      callback = function(args)
+      callback = function()
         local wk = require("which-key")
 
         wk.add({
