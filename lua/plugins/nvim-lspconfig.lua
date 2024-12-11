@@ -23,6 +23,9 @@ return {
       }
     })
 
+    -- Ruby
+    lspconfig.solargraph.setup{}
+
     -- Swift
     lspconfig.sourcekit.setup{}
 

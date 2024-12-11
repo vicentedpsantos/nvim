@@ -43,3 +43,4 @@ o.ttyfast        = true -- Speed up scrolling in Vim
 o.visualbell     = true
 o.wildmenu       = true
 o.wildmode       = "longest,list"  -- get bash-like tab completions
+o.colorcolumn    = "99" -- highlight column 98

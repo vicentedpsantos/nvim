@@ -46,6 +46,9 @@ nnoremap("<Leader>rbe", ":!rebar3 eunit<CR>", { desc = "Run rebar3 eunit" })
 
 nnoremap("<Leader>fjson", ":%!jq --indent 4 '.' %<CR>", { desc = "Format JSON" })
 
+-- Create mapping to run OpenGitHubFileLine in visual mode
+vnoremap("<leader>ghl", ":OpenGitHubFileLine<cr>", { desc = "Open Github page of current repo at current file at current range." })
+
 
 -- :autocmd BufWritePost *.ex,*.exs silent :!mix format %
 vim.api.nvim_create_autocmd("BufWritePre", {
