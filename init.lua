@@ -12,7 +12,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- vim.cmd [[ colorscheme kanagawa ]]
-vim.cmd [[ colorscheme kanagawa-dragon ]]
+-- vim.cmd [[ colorscheme kanagawa-dragon ]]
 -- vim.cmd [[ colorscheme synthweave ]]
 
--- vim.cmd [[ colorscheme oxocarbon ]]
+vim.cmd [[ colorscheme oxocarbon ]]
