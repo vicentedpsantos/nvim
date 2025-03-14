@@ -6,28 +6,30 @@ return {
     local lspconfig = require("lspconfig")
     local mason_bin_path = u.vim_path .. "/mason/bin"
 
+    -- print(mason_bin_path)
+
     -- Elixir
-    lspconfig.elixirls.setup({cmd = { mason_bin_path .. "/elixir-ls" }})
+    lspconfig.elixirls.setup({ cmd = { mason_bin_path .. "/elixir-ls" } })
 
     -- Erlang
-    lspconfig.erlangls.setup{}
+    -- lspconfig.erlangls.setup{}
 
     -- Lua
-    lspconfig.lua_ls.setup({
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" }
-          }
-        }
-      }
-    })
+    -- lspconfig.lua_ls.setup({
+    --   settings = {
+    --     Lua = {
+    --       diagnostics = {
+    --         globals = { "vim" }
+    --       }
+    --     }
+    --   }
+    -- })
 
     -- Ruby
-    lspconfig.solargraph.setup{}
+    -- lspconfig.solargraph.setup{}
 
     -- Swift
-    lspconfig.sourcekit.setup{}
+    -- lspconfig.sourcekit.setup{}
 
     vim.api.nvim_create_autocmd('LspAttach', {
       desc = 'LSP Actions',
